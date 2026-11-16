@@ -1,0 +1,15 @@
+# Never publish applicant documents and browsing backups
+*.pdf
+*.docx
+*.xlsx
+*.xls
+*backup*.json
+*.tar
+*.csv
+.env
+.env.*
+__pycache__/
+.DS_Store
+application_drafts/
+norway_job_pack/
+private/
