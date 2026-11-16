@@ -129,7 +129,7 @@ def parse_csv(raw: bytes) -> list[dict[str, str]]:
 def digest_establishments(raw: bytes) -> list[dict]:
     records = parse_csv(raw)
     if not records or 'Virksomhetsnavn' not in records[0]:
-        raise ValueError('Unrecognized Mattilsynet CSV header')
+        raise ValueError('Unrecognized Mattilsynet CSV header: ' + repr(list(records[0]) if records else []))
     seen, output = set(), []
     for row in records:
         name = row.get('Virksomhetsnavn', '').strip()
@@ -224,7 +224,7 @@ def digest_fleet(raw: bytes, min_length: float = 20.0) -> list[dict]:
                 'imported': True,
             })
     if len(result) < 1:
-        raise ValueError('No fleet-company matches; source schema may have changed')
+        raise ValueError('No fleet-company matches; schema=' + repr({'vessel_keys':list(vessels[0]),'owner_keys':list(owners[0]),'relation_keys':list(relations[0]),'owner_types':sorted(set(x.get('ENTITET','') for x in owners))[:12],'relation_vessel_types':sorted(set(x.get('EIET_ENTITET','') for x in relations))[:12],'relation_owner_types':sorted(set(x.get('EIER_ENTITET','') for x in relations))[:12]}))
     return sorted(result, key=lambda x: (x['company'].casefold(), x['ship'].casefold()))
 
 
