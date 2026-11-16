@@ -122,20 +122,20 @@ def parse_csv(raw: bytes) -> list[dict[str, str]]:
     reader = csv.DictReader(io.StringIO(data), delimiter=delimiter)
     result = []
     for row in reader:
-        result.append({(key or '').strip().replace('\ufeff', ''): (val or '').strip() for key, val in row.items()})
+        result.append({(key or '').strip().replace('\ufeff', '').upper(): (val or '').strip() for key, val in row.items()})
     return result
 
 
 def digest_establishments(raw: bytes) -> list[dict]:
     records = parse_csv(raw)
-    if not records or 'Virksomhetsnavn' not in records[0]:
+    if not records or 'VIRKSOMHETSNAVN' not in records[0]:
         raise ValueError('Unrecognized Mattilsynet CSV header: ' + repr(list(records[0]) if records else []))
     seen, output = set(), []
     for row in records:
-        name = row.get('Virksomhetsnavn', '').strip()
-        city = row.get('Poststed', '').strip()
-        org = row.get('Bedriftsnummer', '').strip()
-        approval = row.get('Godkjenningsnummer', '').strip()
+        name = row.get('VIRKSOMHETSNAVN', '').strip()
+        city = row.get('POSTSTED', '').strip()
+        org = row.get('BEDRIFTSNUMMER', '').strip()
+        approval = row.get('GODKJENNINGSNUMMER', '').strip()
         if not name or not re.fullmatch(r'\d{9}', org):
             # Skip unnamed entries and individual establishments without company organization numbers.
             continue
@@ -150,7 +150,7 @@ def digest_establishments(raw: bytes) -> list[dict]:
             'regno': org,
             'place': city[:100],
             'sector': 'Реестр Mattilsynet',
-            'profile': ('Рыбопереработка · ' + row.get('Produksjonsform', '') +
+            'profile': ('Рыбопереработка · ' + row.get('PRODUKSJONSFORM', '') +
                         ' · одобрение ' + approval)[:250],
             'link': MATTILSYNET,
             'source': MATTILSYNET,
