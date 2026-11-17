@@ -236,11 +236,17 @@ def main(argv=None):
     parser.add_argument('--no-network', action='store_true')
     parser.add_argument('--min-length', type=float, default=20.0)
     args = parser.parse_args(argv)
+    previous = {}
+    if args.out.exists():
+        try:
+            previous = json.loads(args.out.read_text(encoding='utf-8'))
+        except (ValueError, OSError):
+            pass
     state = {
         'status': 'unavailable',
         'generated_at': datetime.now(timezone.utc).isoformat(timespec='seconds'),
         'sources': {'mattilsynet': MATTILSYNET, 'fleet': FISHERIDIR},
-        'counts': {}, 'companies': [], 'vessels': [], 'errors': [],
+        'counts': {}, 'companies': [], 'vessels': [], 'errors': [], 'source_status': {}, 
         'note': 'Companies and vessels are registry entries, NOT vacancies or verified recruitment leads.'
     }
     for label, local_path, landing, file_key, processor in [
@@ -258,19 +264,33 @@ def main(argv=None):
                 payload = http_bytes(endpoint)
             state[file_key] = processor(payload)
             state['counts'][label] = len(state[file_key])
+            state['source_status'][label] = 'ok'
         except Exception as exc:
             msg = f'{label}: {type(exc).__name__}: {exc}'
             state['errors'].append(msg)
+            state['source_status'][label] = 'unavailable'
             print('WARNING:', msg, file=sys.stderr)
-    if state['companies'] and state['vessels']:
+    # A single failed source must not delete its previous published records.
+    for label, field in [('mattilsynet', 'companies'), ('fleet', 'vessels')]:
+        if state['source_status'].get(label) != 'ok':
+            older = previous.get(field, []) if isinstance(previous, dict) else []
+            if isinstance(older, list) and older:
+                state[field] = older
+                state['counts'][label] = len(older)
+                state['source_status'][label] = 'stale'
+                state['errors'].append(label + ': using previous snapshot; not refreshed today.')
+    active = list(state['source_status'].values())
+    if active and all(s == 'ok' for s in active):
         state['status'] = 'updated'
-    elif state['companies'] or state['vessels']:
+    elif any(s == 'ok' for s in active):
         state['status'] = 'partial'
+    elif state['companies'] or state['vessels']:
+        state['status'] = 'stale'
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(state, ensure_ascii=False, separators=(',', ':')), 'utf-8')
     print(f"Status={state['status']} companies={len(state['companies'])} vessels={len(state['vessels'])} output={args.out}")
     # Fail loudly on source failures; workflow will use a checked-in last successful snapshot if provided.
-    return 0 if state['status'] in ('updated', 'partial') else 1
+    return 0 if state['status'] in ('updated', 'partial', 'stale') else 1
 
 
 if __name__ == '__main__':
