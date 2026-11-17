@@ -71,6 +71,8 @@ jobs:
               print('::warning::Snapshot recovery failed:',exc)
           PY
           fi
+      - name: Security scan before publishing
+        run: python scripts/security_audit.py
       - name: Validate public assets and check for private filenames
         run: |
           test -s public/index.html
