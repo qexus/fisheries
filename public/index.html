@@ -9,6 +9,7 @@
   <meta name="robots" content="noindex,nofollow" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="academy.css" />
+  <link rel="stylesheet" href="expansion.css" />
 </head>
 <body>
 <div class="shell">
@@ -31,6 +32,9 @@
       <button class="qa-side-link" data-qa-view="curriculum"><span>▤</span> Полный курс · 12 модулей</button>
       <button class="qa-side-link" data-qa-view="jobs"><span>◈</span> Трудоустройство</button>
       <button class="qa-side-link" data-qa-view="library"><span>⌘</span> Бесплатная библиотека</button>
+      <div class="qa-side-label">КАРЬЕРА И ПРАКТИКА</div>
+      <button class="qa-side-link" data-qx-view="matrix"><span>▦</span> Матрица профессий и документов</button>
+      <button class="qa-side-link" data-qx-view="employers"><span>⌕</span> Проверенные работодатели</button>
 </nav>
     <div class="sidebar-bottom"><span class="status-dot"></span> PUBLIC DATA · НЕТ РАССЫЛКИ<br/><small>Данные сохраняются в этом браузере</small></div>
   </aside>
@@ -54,6 +58,9 @@ s.addEventListener('click',e=>{if(e.target.closest('button[data-view]'))close()}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
 })();
 </script>
+<script src="lessons-extended.js"></script>
+<script src="reference-data.js"></script>
 <script src="academy.js"></script>
+<script src="expansion.js"></script>
 </body>
 </html>
