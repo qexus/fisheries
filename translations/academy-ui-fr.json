@@ -1,0 +1,248 @@
+{
+  "certs": {
+    "ca-sdv": [
+      "Équipage de certains navires",
+      "SDV-BS — Sécurité de base des petits bâtiments commerciaux",
+      "925 CAD à Lévis (885 + 40 CAD de frais)",
+      "CFMU — Lévis; aussi ÉPAQ Grande-Rivière et Eastern Shores New Carlisle",
+      "12,5 h au CFMU",
+      "Pour l’équipage de certains petits bâtiments commerciaux et navires de pêche; anciennement MED A3. L’obligation dépend du bateau et de la zone de navigation.",
+      "Vérifiez le type de navire, la langue de formation et la validité de Fatigue Management. Tarif ÉPAQ publié : 525 CAD pour 13 h en 2025–2026; reconfirmez-le."
+    ],
+    "ca-sdv-qc": [
+      "Québec : option de formation",
+      "SDV-BS — ÉPAQ Grande-Rivière",
+      "525 CAD (tarif ÉPAQ 2025–2026, à confirmer pour 2026–2027)",
+      "École des pêches et de l’aquaculture du Québec, Grande-Rivière",
+      "13 h · en présence",
+      "Formation locale en sécurité des petits bâtiments; des aides de Services Québec peuvent exister. Le tarif affiché date de 2025–2026.",
+      "Confirmez la langue et les dates du cours. Ce cours n’est pas automatiquement requis pour travailler en usine à terre."
+    ],
+    "ca-dvs": [
+      "Équipage de certains navires",
+      "DVS — Sécurité des bâtiments domestiques (ancien MED A1)",
+      "815 CAD",
+      "NSCC, Sydney Waterfront Campus, Nouvelle-Écosse",
+      "26 h · en présence",
+      "Formation aux situations d’urgence à bord. D’autres obligations peuvent s’appliquer selon l’éloignement de la côte.",
+      "Comparez le certificat aux exigences du poste; ne l’achetez pas pour une usine à terre sans raison."
+    ],
+    "ca-dvs-qc": [
+      "Québec : option de formation",
+      "DVS — ÉPAQ Grande-Rivière",
+      "1 075 CAD (tarif 2025–2026, à confirmer pour 2026–2027)",
+      "ÉPAQ, Grande-Rivière, Québec",
+      "26 h",
+      "Formation Domestic Vessel Safety : confirmez la langue, les places disponibles et le tarif courant auprès de l’ÉPAQ.",
+      "Une formation Fatigue Management préalable est demandée. Vérifiez les exigences de votre catégorie de navire."
+    ],
+    "ca-stcw": [
+      "Certains voyages maritimes",
+      "STCW — Sécurité de base",
+      "1 890 CAD",
+      "NSCC, Strait Area Campus, Nouvelle-Écosse",
+      "En présence · environ une semaine",
+      "Formation maritime de base reconnue à l’international. Elle ne remplace pas l’examen des exigences du navire par Transports Canada.",
+      "Confirmez que le STCW est accepté pour votre rôle et les conditions d’inscription pour les étudiants étrangers."
+    ],
+    "ca-fa": [
+      "Selon la composition de l’équipage",
+      "Premiers secours maritimes — niveau élémentaire ou avancé",
+      "Tarif variable selon le centre",
+      "Écoles reconnues par Transports Canada et fournisseurs autorisés",
+      "Selon la catégorie et le niveau",
+      "Sur certains petits navires de pêche, au moins un membre d’équipage désigné doit avoir une formation valide de premiers secours; le niveau avancé s’applique à certains voyages.",
+      "Vérifiez si cette formation est exigée de vous personnellement ou seulement de la personne désignée."
+    ],
+    "ca-svop": [
+      "Conduite d’un navire uniquement",
+      "SVOP — Compétence d’opérateur de petit bâtiment",
+      "625 CAD",
+      "NSCC, Shelburne Campus et autres sites en Nouvelle-Écosse",
+      "26 h · en présence",
+      "Pour commander certains petits bâtiments. Non exigé de tous les matelots ni des ouvriers d’une usine à terre.",
+      "N’achetez pas cette formation sans viser une fonction de conduite du navire."
+    ],
+    "ca-radio": [
+      "Radiocommunications maritimes",
+      "ROC-M / ROC-MC — Radio maritime",
+      "Tarif selon le fournisseur",
+      "Cours et examens de radio maritime, centre à préciser",
+      "Selon la catégorie",
+      "Pour les personnes utilisant les radios maritimes; le type de certificat dépend de l’équipement et du navire.",
+      "Demandez si le poste exige ROC-M ou ROC-MC."
+    ],
+    "ca-roc-qc": [
+      "Québec : radio maritime",
+      "ROC-MC / CRO-CM — ÉPAQ",
+      "855 CAD (tarif ÉPAQ 2025–2026, à confirmer)",
+      "ÉPAQ, Grande-Rivière, Québec",
+      "24 h",
+      "Certificat restreint de radiotéléphoniste maritime commercial; requis uniquement pour les fonctions et installations concernées.",
+      "Ne confondez pas ROC-MC commercial avec ROC-M ordinaire; confirmez auprès de l’armateur."
+    ],
+    "ca-psc": [
+      "Spécialisation supplémentaire",
+      "PSC — Compétence relative aux embarcations de sauvetage",
+      "1 290 CAD",
+      "NSCC, Strait Area Campus, Nouvelle-Écosse",
+      "30,5 h · en présence",
+      "Formation aux embarcations et radeaux de sauvetage, assortie de préalables; généralement pas la première formation d’un débutant.",
+      "Vérifiez d’abord le poste et la formation de base exigée."
+    ],
+    "ca-mfa-qc": [
+      "Québec : premiers secours avancés",
+      "Premiers secours maritimes avancés — ÉPAQ",
+      "1 190 CAD (tarif ÉPAQ 2025–2026, à confirmer)",
+      "ÉPAQ, Grande-Rivière, Québec",
+      "35 h",
+      "Premiers secours maritimes avancés pour certaines responsabilités; pas une exigence générale pour une usine à terre.",
+      "Confirmez si vous serez désigné responsable des premiers secours et quel niveau est requis."
+    ],
+    "ca-food": [
+      "Usine à terre : connaissances utiles",
+      "HACCP, GMP et maîtrise préventive des risques alimentaires",
+      "Ressources officielles de l’ACIA : gratuites",
+      "En ligne : ACIA (CFIA), Canada",
+      "À votre rythme",
+      "L’ACIA explique les risques alimentaires, HACCP et les plans de contrôle préventif. Lire ces pages ne délivre pas de certificat individuel.",
+      "Étudiez la prévention des risques biologiques, chimiques et physiques et exercez-vous à les reconnaître."
+    ],
+    "no-fish": [
+      "Pour la majorité des pêcheurs",
+      "Sécurité des pêcheurs / STCW Basic Safety admissible",
+      "Exemple de cours : 18 788 NOK",
+      "RelyOn, Bergen, offre sur gskkurs.no",
+      "En présence · programme et durée selon l’offre",
+      "L’autorité maritime norvégienne demande une formation des pêcheurs de 50 heures OU un certificat STCW Basic Safety admissible. Vérifiez les exigences et les échéances de recyclage.",
+      "Le prestataire signale des changements pour 2026 dont le libellé diffère de celui de Sdir. Obtenez une confirmation écrite avant de payer."
+    ],
+    "no-stcw": [
+      "Sécurité maritime",
+      "STCW Basic Safety — Certificat d’aptitude (CoP)",
+      "Tarif variable selon le centre",
+      "Centres agréés norvégiens; formations étrangères parfois envisageables",
+      "Habituellement plusieurs jours en présence",
+      "Depuis le 15 août 2025, une simple attestation de cours suivi en Norvège peut ne plus suffire : une demande distincte de CoP auprès de Sjøfartsdirektoratet peut être nécessaire.",
+      "Vérifiez la délivrance du CoP et non uniquement la participation au cours."
+    ],
+    "no-refresh": [
+      "Titulaire d’une formation préalable",
+      "STCW Basic Safety — Recyclage",
+      "À partir de 8 704 NOK (exemple)",
+      "RelyOn et autres prestataires en Norvège",
+      "1–2 jours ou apprentissage en ligne + pratique",
+      "Pas destiné aux débutants sans certificat initial. La formation de sécurité des pêcheurs de 50 heures possède aussi un recyclage distinct de 20 heures.",
+      "Ne confondez pas la formation de base et le recyclage : 8 704 NOK est le prix indicatif du recyclage."
+    ],
+    "no-med": [
+      "Aptitude médicale maritime",
+      "Certificat médical des gens de mer",
+      "2 700 NOK (tarif privé)",
+      "Legekontoret for sjømenn, Strandgaten 18, Bergen",
+      "Examen sur rendez-vous auprès d’un médecin agréé",
+      "Généralement exigé pour l’équipage, avec des exceptions sur certains petits navires. Validité généralement limitée à deux ans.",
+      "Choisissez un médecin figurant sur la liste officielle; confirmez les examens et frais inclus."
+    ],
+    "no-master": [
+      "Commandement et quart à la navigation",
+      "Certificats de capitaine de pêche et d’officier de quart",
+      "Selon la catégorie et l’école",
+      "Sjøfartsdirektoratet et écoles maritimes agréées",
+      "Parcours individuel",
+      "Concerne les capitaines et officiers de quart de navires d’au moins 10,67 m; pas une obligation générale pour un nouveau matelot.",
+      "Vérifiez les caractéristiques du navire et la catégorie du poste avant de choisir l’école."
+    ],
+    "no-radio": [
+      "Selon les fonctions",
+      "Radio, élingage, grues et hydraulique",
+      "Sur demande",
+      "Armateur, Sjøfartsdirektoratet et centres agréés",
+      "Selon la spécialisation",
+      "Certaines tâches exigent des qualifications particulières, mais il n’existe pas de forfait obligatoire universel pour tous les marins.",
+      "Demandez à l’employeur l’intitulé exact et l’autorité qui reconnaît la formation."
+    ],
+    "no-food": [
+      "Usines et aquaculture",
+      "HACCP / GMP, hygiène et qualité des produits de la mer",
+      "Information publique gratuite; cours privés payants",
+      "Mattilsynet et centres de formation",
+      "À votre rythme ou en centre",
+      "Ces connaissances peuvent améliorer une candidature. Un diplôme en ligne privé ne remplace ni le STCW maritime ni les exigences officielles de l’employeur.",
+      "Étudiez l’hygiène alimentaire et demandez si l’usine offre sa propre formation."
+    ],
+    "no-work": [
+      "Autorisation juridique, pas un cours",
+      "UDI — autorisation de travail saisonnier ou qualifié",
+      "Frais variables selon la procédure et la date",
+      "UDI — Direction norvégienne de l’immigration",
+      "Selon la procédure",
+      "Un permis de travail canadien n’autorise pas à travailler en Norvège. Le travail saisonnier en transformation demande une offre adaptée et généralement une confirmation de NAV.",
+      "Vérifiez la faisabilité de la voie migratoire avant de payer une formation coûteuse."
+    ]
+  },
+  "docs": {
+    "ca": [
+      [
+        "Autorisation de travailler",
+        "Confirmez que votre permis canadien autorise le travail chez cet employeur, dans la province et éventuellement sur ce navire. Vérifiez sa validité et ses restrictions."
+      ],
+      [
+        "Qualifications maritimes",
+        "Demandez la jauge brute, la longueur, la zone de navigation, les responsabilités radio et les tâches d’urgence; vérifiez ensuite les cours approuvés par Transports Canada."
+      ],
+      [
+        "Usine à terre",
+        "N’achetez pas de cours maritimes sans exigence écrite de l’employeur. Étudiez les règles d’hygiène et de sécurité de l’usine."
+      ],
+      [
+        "Postes techniques",
+        "Mettez en valeur les pompes, convoyeurs, moteurs et procédures de cadenassage. Certaines professions réglementées exigent une reconnaissance locale."
+      ]
+    ],
+    "no": [
+      [
+        "Autorisation de travailler",
+        "Pour les ressortissants hors EEE, vérifiez les voies UDI : saisonnier, travailleur qualifié ou marin. Un permis CUAET canadien ne vaut pas en Norvège."
+      ],
+      [
+        "Documents maritimes",
+        "Vérifiez auprès de Sdir la validité de la formation de sécurité, la reconnaissance d’un CoP étranger, l’examen médical et les exigences du poste."
+      ],
+      [
+        "Usine à terre",
+        "Un certificat maritime n’est pas toujours requis à terre. Le recrutement et le droit de travailler comptent plus qu’une formation facultative."
+      ],
+      [
+        "Postes techniques",
+        "Vérifiez les qualifications, la langue et les responsabilités : l’entretien en usine ou en aquaculture diffère du métier de mécanicien de marine."
+      ]
+    ]
+  },
+  "checklist": [
+    "L’existence légale de l’entreprise et son site officiel sont vérifiés.",
+    "Une offre active ou un canal carrières officiel a été trouvé.",
+    "Le droit de travailler et la disponibilité du poste ont été vérifiés.",
+    "Seuls les certificats exigés pour ce poste sont répertoriés.",
+    "Le CV et une lettre personnalisée sont prêts, sans expérience maritime inventée.",
+    "Les questions de salaire, logement, assurances, saison et horaires sont préparées.",
+    "Aucun argent n’est versé pour une prétendue « place garantie » sur un bateau.",
+    "Une offre écrite et le droit légal de travailler sont obtenus avant toute démission."
+  ],
+  "library": {
+    "ca": [
+      "Guichet-Emplois du Canada — offres",
+      "MPO (DFO) — secteur des pêches",
+      "ACIA (CFIA) — règles alimentaires",
+      "Transports Canada — règles pour navires de pêche",
+      "TP 10655 — établissements de formation reconnus"
+    ],
+    "no": [
+      "NAV Arbeidsplassen — offres d’emploi",
+      "Fiskeridirektoratet — flotte de pêche",
+      "Mattilsynet — établissements",
+      "Sjøfartsdirektoratet — qualifications maritimes",
+      "UDI — droit de travailler"
+    ]
+  }
+}
