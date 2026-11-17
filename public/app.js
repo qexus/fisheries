@@ -83,7 +83,34 @@ function navTitle(v){return ({dashboard:'Обзор',companies:'Компании
 function render(){document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===state.view));$('crumb').textContent=navTitle(state.view);$('main').innerHTML=({dashboard:dash,companies:renderCompanies,jobs:renderJobs,fleets:renderFleets,course:renderCourse,glossary:renderGlossary,documents:renderDocs,salary:renderSalary,import:renderImport})[state.view]();if(state.view==='salary')calc()}
 function calc(){let a=Number($('hourly')?.value||0),b=Number($('hours')?.value||0),c=Number($('weeks')?.value||0);let total=Math.max(0,a*b*c);if($('weekly'))$('weekly').textContent=fmt(a*b)+' NOK';if($('monthly'))$('monthly').textContent=fmt(total/12)+' NOK';if($('yearly'))$('yearly').textContent=fmt(total)+' NOK'}
 function download(text,name,ctype){let b=new Blob([text],{type:ctype||'application/json;charset=utf-8'});let href=URL.createObjectURL(b);let el=document.createElement('a');el.href=href;el.download=name;el.click();setTimeout(()=>URL.revokeObjectURL(href),500)}
-function doExport(){download(JSON.stringify({app:'qexus-fishing',version:1,exported:new Date().toISOString(),companies:imported,vessels:importedVessels,statuses:status,lessons:lessons,checks:checks},null,2),'qexus-fishing-backup.json');toast('Резервная копия сформирована')}
+
+  // The twelve-lesson Academy uses separate localStorage keys from the legacy UI.
+  // Keep these keys in browser-only JSON backups; never upload user notes.
+  function exportAcademyData(){
+    const snapshot={};
+    try{
+      for(let i=0;i<localStorage.length;i++){
+        const key=localStorage.key(i);
+        if(key && ["qexus-academy-Norway-","qx-expanded-norway-"].some(prefix=>key.startsWith(prefix))){
+          const value=localStorage.getItem(key);
+          if(typeof value==='string'&&value.length<=500000)snapshot[key]=value;
+        }
+      }
+    }catch{}
+    return snapshot;
+  }
+  function restoreAcademyData(snapshot){
+    if(!snapshot||typeof snapshot!=='object'||Array.isArray(snapshot))return;
+    try{
+      for(const [key,value] of Object.entries(snapshot).slice(0,30)){
+        if(!["qexus-academy-Norway-","qx-expanded-norway-"].some(prefix=>key.startsWith(prefix))||typeof value!=='string'||value.length>500000)continue;
+        const parsed=JSON.parse(value);
+        if(parsed&&typeof parsed==='object'&&!Array.isArray(parsed))localStorage.setItem(key,value);
+      }
+    }catch{}
+  }
+
+function doExport(){download(JSON.stringify({app:'qexus-fishing',version:1,exported:new Date().toISOString(),companies:imported,vessels:importedVessels,statuses:status,lessons:lessons,checks:checks,academy:exportAcademyData()},null,2),'qexus-fishing-backup.json');toast('Резервная копия сформирована')}
 // CSV parser supports quoted field separators and CRLF; no third-party libraries.
 function csvParse(src,sep){let out=[],row=[],cur='',quote=false;for(let i=0;i<src.length;i++){const ch=src[i];if(ch==='"'){if(quote&&src[i+1]==='"'){cur+='"';i++}else quote=!quote}else if(ch===sep&&!quote){row.push(cur);cur=''}else if((ch==='\n'||ch==='\r')&&!quote){if(ch==='\r'&&src[i+1]==='\n')i++;row.push(cur);cur='';if(row.some(x=>x.trim()))out.push(row);row=[]}else{cur+=ch}}if(cur||row.length){row.push(cur);out.push(row)}return out}
 function normalize(s){return String(s||'').replace(/^\ufeff/,'').trim().toLowerCase().replace(/[\s_-]/g,'')}
@@ -95,7 +122,7 @@ else{const name=value(row,hdr,['NAVN']);const id=value(row,hdr,['FARTOY_ID']);co
 save(isEst?KEYS.companies:KEYS.vessels,isEst?imported:importedVessels);$('importReport').innerHTML=`<div class="note">Добавлено ${n} записей. Дубликатов/пустых: ${skip}. Исходных строк: ${rows.length-1}. Все импортированные записи считаются <b>только данными реестра</b>, не вакансиями.</div>`;toast('Импорт завершён: '+n+' записей');}
 function checkQuiz(mid){const m=seed.modules.find(x=>x.id===mid);if(!m)return;let ok=0,complete=0,feedback=[];m.questions.forEach((x,i)=>{const p=document.querySelector(`input[name="q_${mid}_${i}"]:checked`);if(p){complete++;if(Number(p.value)===x.answer)ok++}feedback.push(`${i+1}: ${x.explanation}`)});let box=$('quiz_out_'+mid);box.className='answer '+(ok<m.questions.length?'bad':'');box.innerHTML=`${ok} из ${m.questions.length} верно. ${complete<m.questions.length?'Ответь на все вопросы. ':''}<div class="small">${feedback.map(h).join('<br/>')}</div>`;if(ok===m.questions.length)toast('Все ответы верны. Выполни практику и отметь урок.');}
 document.addEventListener('click',e=>{let b=e.target.closest('[data-view],[data-go],[data-quiz],#more,#exportData');if(!b)return;if(b.dataset.view||b.dataset.go){state.view=b.dataset.view||b.dataset.go;state.q='';state.cat='Все';state.limit=100;render();window.scrollTo({top:0,behavior:'smooth'})}else if(b.id==='more'){state.limit+=100;render()}else if(b.id==='exportData'){doExport()}else if(b.dataset.quiz){checkQuiz(Number(b.dataset.quiz))}});
-document.addEventListener('change',async e=>{let t=e.target;if(t.dataset.statusKind){setStatus(t.dataset.statusKind,t.dataset.statusKey,t.value)}else if(t.dataset.done){lessons[t.dataset.done]=t.checked;save(KEYS.lessons,lessons);render()}else if(t.dataset.check){checks[t.dataset.check]=t.checked;save(KEYS.checks,checks);render()}else if(t.id==='cat'){state.cat=t.value;render()}else if(t.id==='termCat'){state.termCat=t.value;render()}else if(t.id==='csvFile'&&t.files?.[0]){await doCSV(t.files[0])}else if(t.id==='restoreFile'&&t.files?.[0]){try{const x=JSON.parse(await t.files[0].text());if(x.app!=='qexus-fishing'||!Array.isArray(x.companies)||!Array.isArray(x.vessels))throw Error('Неверный формат');imported=x.companies;importedVessels=x.vessels;status=x.statuses||{};lessons=x.lessons||{};checks=x.checks||{};save(KEYS.companies,imported);save(KEYS.vessels,importedVessels);save(KEYS.statuses,status);save(KEYS.lessons,lessons);save(KEYS.checks,checks);render();toast('Резервная копия восстановлена')}catch(ex){toast('Не удалось прочитать эту резервную копию')}}});
+document.addEventListener('change',async e=>{let t=e.target;if(t.dataset.statusKind){setStatus(t.dataset.statusKind,t.dataset.statusKey,t.value)}else if(t.dataset.done){lessons[t.dataset.done]=t.checked;save(KEYS.lessons,lessons);render()}else if(t.dataset.check){checks[t.dataset.check]=t.checked;save(KEYS.checks,checks);render()}else if(t.id==='cat'){state.cat=t.value;render()}else if(t.id==='termCat'){state.termCat=t.value;render()}else if(t.id==='csvFile'&&t.files?.[0]){await doCSV(t.files[0])}else if(t.id==='restoreFile'&&t.files?.[0]){try{if(t.files[0].size>4e6)throw Error('слишком большой файл');const x=JSON.parse(await t.files[0].text());if(x.app!=='qexus-fishing'||!Array.isArray(x.companies)||!Array.isArray(x.vessels))throw Error('Неверный формат');imported=x.companies;importedVessels=x.vessels;status=x.statuses||{};lessons=x.lessons||{};checks=x.checks||{};save(KEYS.companies,imported);save(KEYS.vessels,importedVessels);save(KEYS.statuses,status);save(KEYS.lessons,lessons);save(KEYS.checks,checks);restoreAcademyData(x.academy);render();toast('Резервная копия восстановлена, включая прогресс Академии')}catch(ex){toast('Не удалось прочитать эту резервную копию')}}});
 document.addEventListener('input',e=>{let t=e.target;if(['hourly','hours','weeks'].includes(t.id)){calc();return}if(['q','courseSearch','termSearch'].includes(t.id)){let ss=t.selectionStart||0;let v=t.value;if(t.id==='q')state.q=v;if(t.id==='courseSearch')state.courseSearch=v;if(t.id==='termSearch')state.termSearch=v;render();let a=$(t.id);if(a){a.focus();a.setSelectionRange(ss,ss)}}});
 window.qexusNavigate=function(view){state.view=view;state.q='';state.cat='Все';state.limit=100;render();document.getElementById('sidebar')?.classList.remove('open');document.getElementById('menuToggle')?.setAttribute('aria-expanded','false');window.scrollTo({top:0,behavior:'smooth'});};
 render();
