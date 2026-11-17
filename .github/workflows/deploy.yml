@@ -26,6 +26,10 @@ jobs:
           python-version: '3.12'
       - name: Test data processing
         run: python -m unittest discover -s tests -v
+      - name: Generate verified-vacancy status from authorized sources
+        run: |
+          python scripts/refresh_jobs.py --out public/generated/jobs.json
+          python -m json.tool public/generated/jobs.json > /dev/null
       - name: Validate Academy curriculum and JavaScript
         run: |
           node tests/check_content.mjs
@@ -72,6 +76,7 @@ jobs:
           test -s public/index.html
           test -s public/app.js
           test -s public/generated/registry.json
+          test -s public/generated/jobs.json
           python -m json.tool public/generated/registry.json > /dev/null
           if find public -type f \( -name '*.docx' -o -name '*.xlsx' -o -name '*backup*' -o -name '*.tar' \) | grep .; then
             echo 'Private or inappropriate data file found in public/'
