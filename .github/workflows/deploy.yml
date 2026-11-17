@@ -37,15 +37,34 @@ jobs:
           python scripts/build_registry.py --out public/generated/registry.json
           exit_code=$?
           if [ "$exit_code" -ne 0 ]; then
-            echo '::warning::Both source downloads failed; using neutral empty snapshot.'
-            # Existing seed companies, lessons, and local CSV import remain usable.
+            echo '::warning::Official downloads failed; attempting last published public snapshot.'
             python - <<'PY'
           import json
           from pathlib import Path
+          from urllib.request import Request, urlopen
           target=Path('public/generated/registry.json')
-          value=json.loads(target.read_text(encoding='utf-8'))
-          value['status']='unavailable'
-          target.write_text(json.dumps(value,ensure_ascii=False),encoding='utf-8')
+          current=json.loads(target.read_text(encoding='utf-8'))
+          try:
+              url='https://qexus.github.io/fisheries/generated/registry.json'
+              request=Request(url, headers={'User-Agent':'qexus-fisheries-snapshot-backup/1.0'})
+              with urlopen(request, timeout=25) as response:
+                  raw=response.read(8_000_001)
+              if len(raw)>8_000_000: raise ValueError('Oversized snapshot')
+              older=json.loads(raw)
+              if not isinstance(older.get('companies'),list) or not isinstance(older.get('vessels'),list):
+                  raise ValueError('Invalid snapshot')
+              if len(older['companies'])<100 or len(older['vessels'])<50:
+                  raise ValueError('Snapshot counts too low')
+              older['status']='stale'
+              older['note']='Downloads failed: retaining previously published dataset; not refreshed today.'
+              older['errors']=current.get('errors',[])
+              target.write_text(json.dumps(older,ensure_ascii=False),encoding='utf-8')
+              print('Previous snapshot retained:',len(older['companies']),'companies,',len(older['vessels']),'vessels')
+          except Exception as exc:
+              current['status']='unavailable'
+              current['note']='Download and previous snapshot failed; seed data still available.'
+              target.write_text(json.dumps(current,ensure_ascii=False),encoding='utf-8')
+              print('::warning::Snapshot recovery failed:',exc)
           PY
           fi
       - name: Validate public assets and check for private filenames
