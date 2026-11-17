@@ -33,7 +33,15 @@ function setStatus(kind,key,v){status[kind+':'+key]=v;save(KEYS.statuses,status)
 function selectStatus(kind,key){const o=['Не проверял','Изучаю','Проверено','Подходит условно','Не подходит','Вопрос работодателю','Готово к отклику','Отправлено вручную'];return `<select class="sel mini" aria-label="Статус" data-status-kind="${h(kind)}" data-status-key="${h(key)}">${o.map(x=>`<option ${x===getStatus(kind,key)?'selected':''}>${h(x)}</option>`).join('')}</select>`}
 function viewTitle(t,subtitle){return `<div class="overline">QEXUS / NORWAY / 2026</div><h1>${h(t)}</h1><p class="sub">${subtitle}</p>`}
 function stat(v,cap){return `<div class="stat"><b>${h(v)}</b><small>${cap}</small></div>`}
-function dash(){const a=companies(),checked=Object.values(status).filter(x=>!['Не проверял','Изучаю'].includes(x)).length,done=(()=>{try{return Object.values(JSON.parse(localStorage.getItem('qexus-academy-Norway-lessons')||'{}')).filter(Boolean).length}catch{return 0}})();return viewTitle('Обзор проекта','Исследовательская база, обучение и подготовка. Все данные на этом устройстве — никто не получает писем автоматически.')+
+function dash(){const a=companies(),checked=Object.values(status).filter(x=>!['Не проверял','Изучаю'].includes(x)).length,done=(()=>{try{return Object.values(JSON.parse(localStorage.getItem('qexus-academy-Norway-lessons')||'{}')).filter(Boolean).length}catch{return 0}})();return `<section class="norway-hero" aria-labelledby="norway-hero-title">
+  <div class="norway-hero-eyebrow">NORWEGIAN FISHERIES INTELLIGENCE</div>
+  <h1 id="norway-hero-title">Рыбная отрасль Норвегии <span class="norway-hero-flag" aria-label="Норвегия">🇳🇴</span></h1>
+  <p class="norway-hero-lead">Предприятия, рыболовный флот, карьерные возможности и бесплатное обучение. Объявления нужно перепроверять перед откликом.</p>
+  <div class="norway-hero-meta">
+    <span class="norway-hero-pill norway-hero-pill-primary"><span class="norway-hero-dot" aria-hidden="true"></span> Публичные реестры</span>
+    <span class="norway-hero-pill">🇳🇴 NO · предприятия и флот</span>
+  </div>
+</section>`+
 `<div class="stat-grid">${stat(a.length,'предприятий в базе')}${stat(jobs().length,'объявлений / карьерных страниц · снимок 16.11')}${stat(fleet().length,'флот / судовые записи')}${stat(done+'/12','уроков завершено')}</div>
 <div class="note"><b>Открытые реестры:</b> ${registryMeta.status==='updated'?'свежая выгрузка':registryMeta.status==='partial'?'частичная выгрузка':registryMeta.status==='stale'?'прошлая выгрузка, повторное обновление не удалось':registryMeta.status==='loading'?'загрузка…':'автозагрузка недоступна'}${registryMeta.generated_at?' · дата сборки: '+h(String(registryMeta.generated_at).slice(0,10)):''}. Записи из госреестров не являются вакансиями. Объявления и карьерные каналы не обновляются автоматически — это снимок от 16.11.2026.</div><div class="note warn">Ключевой барьер — право на работу в Норвегии. Канадское разрешение по CUAET не действует там. Проверяй тип разрешения UDI и готовность работодателя поддержать оформление ДО рассылки резюме.</div>
 <div class="layout-2"><section class="panel"><div class="panel-head"><h2>Приоритетные направления</h2><span class="tag green">На основе опыта</span></div>
