@@ -11,7 +11,7 @@ let publicCompanies=[], publicVessels=[], registryMeta={status:'loading',generat
 // Network data are public registry records, never recruitment offers. Personal statuses remain local.
 let state={view:'dashboard',q:'',cat:'Все',courseSearch:'',termSearch:'',termCat:'Все',limit:100};
 const $=id=>document.getElementById(id);const h=(s)=>String(s??'').replace(/[&<>"']/g,v=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[v]));
-function url(v){return /^https?:\/\/[^\s"'<>]+$/i.test(String(v||''))?String(v):''}
+function url(v){try{const u=new URL(String(v||''));return u.protocol==='https:'&&!u.username&&!u.password?u.href:''}catch{return ''}}
 function ext(href,label){return url(href)?`<a target="_blank" rel="noopener noreferrer" href="${h(href)}">${h(label||'Открыть источник')} ↗</a>`:''}
 function email(mail){return /^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/.test(String(mail||''))?`<a href="mailto:${h(mail)}">${h(mail)}</a>`:''}
 function toast(t){let el=$('toast');el.textContent=t;el.style.display='block';clearTimeout(window.__qToast);window.__qToast=setTimeout(()=>el.style.display='none',3900)}
