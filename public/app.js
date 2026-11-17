@@ -25,7 +25,8 @@ async function loadPublishedRegistry(){
   if(!Array.isArray(data.companies)||!Array.isArray(data.vessels))throw Error('Invalid registry schema');
   publicCompanies=data.companies;publicVessels=data.vessels;registryMeta=data;
  }catch(e){registryMeta={status:'unavailable',generated_at:null,counts:{},error:String(e.message||e)};}
- render();
+ // Do not close a lesson or career panel when the network request finishes.
+ if(!document.querySelector('#main .qa-wrap'))render();
 }
 const tick=(x)=>x?'✓':'○';const u=(v)=>String(v||'').toLowerCase();const contains=(s,q)=>u(s).includes(u(q));
 function getStatus(kind,key){return status[kind+':'+key]||'Не проверял'}
