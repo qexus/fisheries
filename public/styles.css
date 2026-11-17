@@ -211,3 +211,8 @@ td small{color:#90afbb}
  .norway-hero h1{font-size:25px}
  .norway-hero-pill{font-size:10px;white-space:normal}
 }
+
+/* Current country is a label, never a link to this exact page. */
+.country-switch .country-current{display:inline-flex;align-items:center;gap:5px;white-space:nowrap;border:1px solid #39cfbb;background:#154a4a;color:#adfff1;text-decoration:none;padding:8px 11px;border-radius:11px;font-weight:750;font-size:12px;letter-spacing:0}
+@media(max-width:720px){.country-switch .country-current{padding:6px 8px;font-size:11px}}
+@media(max-width:480px){.country-switch .country-current{padding:5px 8px;font-size:15px}.country-switch .country-current span{display:none}}
