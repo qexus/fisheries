@@ -134,3 +134,80 @@ td small{color:#90afbb}
  .country-switch a span{display:none}
  .country-switch a{font-size:16px}
 }
+
+
+
+/* Norway dashboard hero aligned with Canada Fisheries — qexus lab visual system */
+.norway-hero{
+  position:relative;
+  overflow:hidden;
+  background:radial-gradient(circle at 85% 15%,#174b55 0%,#0b2535 34%,#0a2033 73%);
+  border:1px solid #285264;
+  padding:29px;
+  border-radius:16px;
+  margin-bottom:20px;
+}
+.norway-hero-eyebrow{
+  color:#48d6be;
+  font-size:11px;
+  letter-spacing:1.9px;
+  font-weight:800;
+  margin-bottom:13px;
+}
+.norway-hero h1{
+  color:#f1fbff;
+  font-size:clamp(28px,3.1vw,36px);
+  font-weight:800;
+  letter-spacing:-.8px;
+  line-height:1.3;
+  margin:0 0 24px;
+}
+.norway-hero-flag{white-space:nowrap}
+.norway-hero-lead{
+  color:#acc6d2;
+  font-size:14px;
+  line-height:1.8;
+  max-width:750px;
+  margin:0 0 24px;
+}
+.norway-hero-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  align-items:center;
+}
+.norway-hero-pill{
+  font-size:11px;
+  padding:6px 10px;
+  border:1px solid #396072;
+  color:#c4e6f0;
+  border-radius:99px;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  max-width:100%;
+}
+.norway-hero-pill-primary{color:#8be5d7;border-color:#3a806f;background:#123e3d5c}
+.norway-hero-dot{
+  display:inline-block;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  flex-shrink:0;
+  background:#48d6be;
+}
+@media(max-width:740px){
+ .norway-hero{padding:20px;margin-bottom:18px}
+ .norway-hero h1{font-size:27px;margin-bottom:22px}
+ .norway-hero-lead{font-size:14px;margin-bottom:21px}
+ .shell .stat-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+ .shell .stat{padding:15px}
+ .shell .stat b{font-size:clamp(24px,5.5vw,32px);letter-spacing:-.6px}
+ .shell .stat small{font-size:12px;line-height:1.55}
+}
+@media(max-width:380px){
+ .norway-hero{padding:17px}
+ .norway-hero-eyebrow{font-size:10px;letter-spacing:1.4px}
+ .norway-hero h1{font-size:25px}
+ .norway-hero-pill{font-size:10px;white-space:normal}
+}
