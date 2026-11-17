@@ -1,0 +1,647 @@
+[
+  [
+    "Production worker",
+    "Ouvrier de production",
+    "Виробничий працівник"
+  ],
+  [
+    "Production operator",
+    "Opérateur de production",
+    "Оператор виробництва"
+  ],
+  [
+    "Technician",
+    "Technicien",
+    "Технік"
+  ],
+  [
+    "Maintenance technician",
+    "Technicien de maintenance",
+    "Технік з обслуговування"
+  ],
+  [
+    "Operations operator",
+    "Opérateur d’exploitation",
+    "Оператор експлуатації"
+  ],
+  [
+    "Fish processing",
+    "Transformation du poisson",
+    "Перероблення риби"
+  ],
+  [
+    "Seafood industry",
+    "Industrie des produits de la mer",
+    "Галузь морепродуктів"
+  ],
+  [
+    "Fish farm",
+    "Ferme aquacole",
+    "Рибна ферма"
+  ],
+  [
+    "Aquaculture",
+    "Aquaculture",
+    "Аквакультура"
+  ],
+  [
+    "Smolt",
+    "Smolt, jeune saumon",
+    "Смолт, молодь лосося"
+  ],
+  [
+    "Recirculating aquaculture system",
+    "Système aquacole en recirculation (RAS)",
+    "Рециркуляційна система аквакультури (RAS)"
+  ],
+  [
+    "Water treatment",
+    "Traitement de l’eau",
+    "Очищення води"
+  ],
+  [
+    "Dissolved oxygen",
+    "Oxygène dissous",
+    "Розчинений кисень"
+  ],
+  [
+    "Water quality",
+    "Qualité de l’eau",
+    "Якість води"
+  ],
+  [
+    "Fish welfare",
+    "Bien-être des poissons",
+    "Добробут риби"
+  ],
+  [
+    "Flow rate",
+    "Débit d’eau",
+    "Витрата води"
+  ],
+  [
+    "Pump",
+    "Pompe",
+    "Помпа"
+  ],
+  [
+    "Valve",
+    "Vanne",
+    "Клапан"
+  ],
+  [
+    "Filter",
+    "Filtre",
+    "Фільтр"
+  ],
+  [
+    "Sensor",
+    "Capteur",
+    "Датчик"
+  ],
+  [
+    "Alarm",
+    "Alarme",
+    "Сигнал тривоги"
+  ],
+  [
+    "Maintenance",
+    "Entretien",
+    "Технічне обслуговування"
+  ],
+  [
+    "Preventive maintenance",
+    "Entretien préventif",
+    "Профілактичне обслуговування"
+  ],
+  [
+    "Breakdown",
+    "Panne",
+    "Несправність"
+  ],
+  [
+    "Spare parts",
+    "Pièces de rechange",
+    "Запасні частини"
+  ],
+  [
+    "Conveyor belt",
+    "Courroie transporteuse",
+    "Конвеєрна стрічка"
+  ],
+  [
+    "Hydraulics",
+    "Hydraulique",
+    "Гідравліка"
+  ],
+  [
+    "Electrical fault",
+    "Défaillance électrique",
+    "Електрична несправність"
+  ],
+  [
+    "Safety procedures",
+    "Procédures de sécurité",
+    "Правила безпеки"
+  ],
+  [
+    "Protective equipment",
+    "Équipement de protection",
+    "Захисне спорядження"
+  ],
+  [
+    "Life jacket",
+    "Gilet de sauvetage",
+    "Рятувальний жилет"
+  ],
+  [
+    "Muster station",
+    "Poste de rassemblement",
+    "Місце збору"
+  ],
+  [
+    "Emergency drill",
+    "Exercice d’urgence",
+    "Навчальна тривога"
+  ],
+  [
+    "First aid",
+    "Premiers secours",
+    "Перша допомога"
+  ],
+  [
+    "Slip hazard",
+    "Risque de glissade",
+    "Небезпека послизнутися"
+  ],
+  [
+    "Stop work",
+    "Arrêter le travail",
+    "Зупинити роботу"
+  ],
+  [
+    "Supervisor",
+    "Superviseur",
+    "Керівник зміни"
+  ],
+  [
+    "Shift",
+    "Quart de travail",
+    "Зміна"
+  ],
+  [
+    "Overtime",
+    "Heures supplémentaires",
+    "Понаднормові години"
+  ],
+  [
+    "Work permit",
+    "Permis de travail",
+    "Дозвіл на роботу"
+  ],
+  [
+    "Residence permit",
+    "Permis de séjour",
+    "Дозвіл на проживання"
+  ],
+  [
+    "Job offer",
+    "Offre d’emploi",
+    "Пропозиція роботи"
+  ],
+  [
+    "Employment contract",
+    "Contrat de travail",
+    "Трудовий договір"
+  ],
+  [
+    "Minimum wage",
+    "Salaire minimum",
+    "Мінімальна заробітна плата"
+  ],
+  [
+    "Gross salary",
+    "Salaire brut",
+    "Валова зарплата"
+  ],
+  [
+    "Net salary",
+    "Salaire net",
+    "Зарплата після відрахувань"
+  ],
+  [
+    "Holiday pay",
+    "Indemnité de vacances",
+    "Відпускні"
+  ],
+  [
+    "Housing",
+    "Logement",
+    "Житло"
+  ],
+  [
+    "Fishery vessel",
+    "Navire de pêche",
+    "Риболовне судно"
+  ],
+  [
+    "Trawler",
+    "Chalutier",
+    "Траулер"
+  ],
+  [
+    "Fishing crew",
+    "Équipage de pêche",
+    "Риболовний екіпаж"
+  ],
+  [
+    "Deckhand",
+    "Matelot de pont",
+    "Палубний працівник"
+  ],
+  [
+    "Skipper",
+    "Capitaine de pêche",
+    "Капітан"
+  ],
+  [
+    "Port",
+    "Port",
+    "Порт"
+  ],
+  [
+    "Deck",
+    "Pont",
+    "Палуба"
+  ],
+  [
+    "Hold",
+    "Cale",
+    "Трюм"
+  ],
+  [
+    "Winch",
+    "Treuil",
+    "Лебідка"
+  ],
+  [
+    "Trawl",
+    "Chalut",
+    "Трал"
+  ],
+  [
+    "Bottom trawl",
+    "Chalut de fond",
+    "Донний трал"
+  ],
+  [
+    "Pelagic trawl",
+    "Chalut pélagique",
+    "Пелагічний трал"
+  ],
+  [
+    "Longline",
+    "Palangre",
+    "Ярус"
+  ],
+  [
+    "Gillnet",
+    "Filet maillant",
+    "Зяброва сітка"
+  ],
+  [
+    "Purse seine",
+    "Senne coulissante",
+    "Кошельковий невід"
+  ],
+  [
+    "Crab pot",
+    "Casier à crabe",
+    "Пастка для крабів"
+  ],
+  [
+    "Bycatch",
+    "Prise accessoire",
+    "Прилов"
+  ],
+  [
+    "Quota",
+    "Quota de pêche",
+    "Квота вилову"
+  ],
+  [
+    "Landing",
+    "Débarquement des prises",
+    "Вивантаження улову"
+  ],
+  [
+    "Fillet",
+    "Filet de poisson",
+    "Філе"
+  ],
+  [
+    "Filleting",
+    "Filetage du poisson",
+    "Філеювання"
+  ],
+  [
+    "Gutting",
+    "Éviscération",
+    "Патрання"
+  ],
+  [
+    "Packing",
+    "Emballage",
+    "Пакування"
+  ],
+  [
+    "Quality control",
+    "Contrôle de la qualité",
+    "Контроль якості"
+  ],
+  [
+    "Traceability",
+    "Traçabilité",
+    "Простежуваність"
+  ],
+  [
+    "Cleaning",
+    "Nettoyage",
+    "Прибирання"
+  ],
+  [
+    "Disinfection",
+    "Désinfection",
+    "Дезінфекція"
+  ],
+  [
+    "Cold storage",
+    "Entreposage frigorifique",
+    "Холодильне зберігання"
+  ],
+  [
+    "Freezer",
+    "Congélateur",
+    "Морозильна камера"
+  ],
+  [
+    "Batch",
+    "Lot de production",
+    "Виробнича партія"
+  ],
+  [
+    "Temperature",
+    "Température",
+    "Температура"
+  ],
+  [
+    "Instructions",
+    "Consignes",
+    "Інструкції"
+  ],
+  [
+    "Recruitment",
+    "Recrutement",
+    "Набір працівників"
+  ],
+  [
+    "Employer",
+    "Employeur",
+    "Роботодавець"
+  ],
+  [
+    "Application",
+    "Candidature",
+    "Заявка на роботу"
+  ],
+  [
+    "Deadline",
+    "Date limite de candidature",
+    "Кінцевий термін подання"
+  ],
+  [
+    "Experience",
+    "Expérience",
+    "Досвід"
+  ],
+  [
+    "Full time",
+    "Temps plein",
+    "Повна зайнятість"
+  ],
+  [
+    "Temporary position",
+    "Poste temporaire",
+    "Тимчасова посада"
+  ],
+  [
+    "Certification",
+    "Certification",
+    "Сертифікація"
+  ],
+  [
+    "Medical certificate",
+    "Certificat médical",
+    "Медична довідка"
+  ],
+  [
+    "Training",
+    "Formation",
+    "Навчання"
+  ],
+  [
+    "Written contract",
+    "Contrat écrit",
+    "Письмовий договір"
+  ],
+  [
+    "Seafood plant",
+    "Usine de produits de la mer",
+    "Завод морепродуктів"
+  ],
+  [
+    "Fish cutter",
+    "Préposé à la découpe du poisson",
+    "Працівник із розбирання риби"
+  ],
+  [
+    "Shellfish",
+    "Mollusques et crustacés",
+    "Молюски й ракоподібні"
+  ],
+  [
+    "Lobster",
+    "Homard",
+    "Омар"
+  ],
+  [
+    "Crab",
+    "Crabe",
+    "Краб"
+  ],
+  [
+    "Scallop",
+    "Pétoncle",
+    "Морський гребінець"
+  ],
+  [
+    "Hatchery",
+    "Écloserie",
+    "Рибний розплідник"
+  ],
+  [
+    "RAS",
+    "Système aquacole en recirculation (RAS)",
+    "Рециркуляційна система аквакультури"
+  ],
+  [
+    "Feed system",
+    "Système d’alimentation",
+    "Система годівлі"
+  ],
+  [
+    "Conveyor",
+    "Convoyeur",
+    "Конвеєр"
+  ],
+  [
+    "Seasonal work",
+    "Travail saisonnier",
+    "Сезонна робота"
+  ],
+  [
+    "Processing line",
+    "Chaîne de transformation",
+    "Лінія перероблення"
+  ],
+  [
+    "Sanitation",
+    "Assainissement",
+    "Санітарне оброблення"
+  ],
+  [
+    "Food safety",
+    "Salubrité alimentaire",
+    "Безпека харчових продуктів"
+  ],
+  [
+    "PPE",
+    "Équipement de protection individuelle (EPI)",
+    "Засоби індивідуального захисту (ЗІЗ)"
+  ],
+  [
+    "Lockout / tagout",
+    "Cadenassage et étiquetage (LOTO)",
+    "Блокування й маркування джерел енергії (LOTO)"
+  ],
+  [
+    "WHMIS",
+    "SIMDUT (WHMIS)",
+    "WHMIS — канадська система інформації про небезпечні матеріали"
+  ],
+  [
+    "Marine Emergency Duties (MED)",
+    "Fonctions d’urgence en mer (MED)",
+    "Підготовка до аварійних ситуацій на морі (MED)"
+  ],
+  [
+    "Crew member",
+    "Membre d’équipage",
+    "Член екіпажу"
+  ],
+  [
+    "Fishing vessel",
+    "Navire de pêche",
+    "Риболовне судно"
+  ],
+  [
+    "Gear",
+    "Engins de pêche",
+    "Риболовні снасті"
+  ],
+  [
+    "Trap / pot",
+    "Casier ou piège",
+    "Пастка"
+  ],
+  [
+    "Net",
+    "Filet",
+    "Сітка"
+  ],
+  [
+    "Catch",
+    "Prises",
+    "Улов"
+  ],
+  [
+    "Open work permit",
+    "Permis de travail ouvert",
+    "Відкритий дозвіл на роботу"
+  ],
+  [
+    "Employer-specific permit",
+    "Permis de travail lié à un employeur donné",
+    "Дозвіл для конкретного роботодавця"
+  ],
+  [
+    "LMIA",
+    "Étude d’impact sur le marché du travail (EIMT)",
+    "Оцінка впливу на ринок праці (LMIA)"
+  ],
+  [
+    "Job Bank",
+    "Guichet-Emplois",
+    "Державний банк вакансій Job Bank"
+  ],
+  [
+    "Gross pay",
+    "Rémunération brute",
+    "Валова зарплата"
+  ],
+  [
+    "Net pay",
+    "Rémunération nette",
+    "Чиста зарплата"
+  ],
+  [
+    "Labourer",
+    "Manœuvre",
+    "Підсобний працівник"
+  ],
+  [
+    "Vessel safety",
+    "Sécurité du navire",
+    "Безпека судна"
+  ],
+  [
+    "Workplace safety",
+    "Santé et sécurité au travail",
+    "Охорона праці"
+  ],
+  [
+    "Personal flotation device",
+    "Vêtement de flottaison individuel (VFI)",
+    "Індивідуальний плавзасіб"
+  ],
+  [
+    "Salmon",
+    "Saumon",
+    "Лосось"
+  ],
+  [
+    "Oyster",
+    "Huître",
+    "Устриця"
+  ],
+  [
+    "Lobster processing",
+    "Transformation du homard",
+    "Перероблення омарів"
+  ],
+  [
+    "NOC",
+    "Classification nationale des professions (CNP)",
+    "Національна класифікація професій (NOC)"
+  ]
+]
