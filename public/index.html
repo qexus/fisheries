@@ -8,10 +8,11 @@
   <title>qexus lab · Norway fisheries</title>
   <meta name="robots" content="noindex,nofollow" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="academy.css" />
 </head>
 <body>
 <div class="shell">
-  <aside class="sidebar">
+  <aside class="sidebar" id="sidebar">
     <div class="brand"><span class="brand-logo">q<span>✳</span></span><div><strong><a class="qexus-home" href="https://qexus.github.io/" title="Все проекты qexus lab">qexus lab</a></strong><small>FISHERIES / NORWAY</small></div></div>
     <div class="aside-head">РАБОЧЕЕ ПРОСТРАНСТВО</div>
     <nav id="nav">
@@ -25,11 +26,16 @@
       <button class="nav-item" data-view="documents"><span>◩</span> Документы</button>
       <button class="nav-item" data-view="salary"><span>⊞</span> Калькулятор NOK</button>
       <button class="nav-item" data-view="import"><span>⇪</span> Импорт реестров</button>
-    </nav>
+          <div class="qa-side-label">БЕСПЛАТНАЯ АКАДЕМИЯ</div>
+      <button class="qa-side-link" data-qa-view="cert"><span>✦</span> Сертификаты и цены</button>
+      <button class="qa-side-link" data-qa-view="curriculum"><span>▤</span> Полный курс · 12 модулей</button>
+      <button class="qa-side-link" data-qa-view="jobs"><span>◈</span> Трудоустройство</button>
+      <button class="qa-side-link" data-qa-view="library"><span>⌘</span> Бесплатная библиотека</button>
+</nav>
     <div class="sidebar-bottom"><span class="status-dot"></span> PUBLIC DATA · НЕТ РАССЫЛКИ<br/><small>Данные сохраняются в этом браузере</small></div>
   </aside>
   <div class="main-wrap">
-    <header class="topbar"><div class="crumb"><a class="qexus-home crumb-home" href="https://qexus.github.io/">qexus lab</a> <span>/</span> <span id="crumb">Обзор</span></div><div class="top-right"><nav class="country-switch" aria-label="Выбор страны"><a href="https://qexus.github.io/fisheries/" aria-current="page">🇳🇴 <span>Норвегия</span></a><a href="https://qexus.github.io/fisheries-ca/">🇨🇦 <span>Канада</span></a></nav><span class="pill version-pill">VER. 1.1</span></div></header>
+    <header class="topbar"><button id="menuToggle" aria-label="Открыть меню" aria-expanded="false" class="hamburger">☰</button><div class="crumb"><a class="qexus-home crumb-home" href="https://qexus.github.io/">qexus lab</a> <span>/</span> <span id="crumb">Обзор</span></div><div class="top-right"><nav class="country-switch" aria-label="Выбор страны"><a href="https://qexus.github.io/fisheries/" aria-current="page">🇳🇴 <span>Норвегия</span></a><a href="https://qexus.github.io/fisheries-ca/">🇨🇦 <span>Канада</span></a></nav><span class="pill version-pill">VER. 1.1</span></div></header>
     <main id="main" class="content"></main>
     <footer class="footer">qexus lab · самостоятельное исследование · 16.11.2026 · не является кадровым агентством или официальной сертификацией</footer>
   </div>
@@ -37,5 +43,17 @@
 <div id="toast" role="status" aria-live="polite"></div>
 <script src="data.js"></script>
 <script src="app.js"></script>
+<script>
+(()=>{
+const t=document.getElementById('menuToggle'),s=document.getElementById('sidebar');
+if(!t||!s)return;
+function close(){s.classList.remove('open');t.setAttribute('aria-expanded','false')}
+t.addEventListener('click',()=>{const on=s.classList.toggle('open');t.setAttribute('aria-expanded',String(on))});
+document.addEventListener('click',e=>{if(window.innerWidth<=740&&!e.target.closest('#sidebar')&&!e.target.closest('#menuToggle'))close()});
+s.addEventListener('click',e=>{if(e.target.closest('button[data-view]'))close()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+})();
+</script>
+<script src="academy.js"></script>
 </body>
 </html>
