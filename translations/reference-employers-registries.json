@@ -1,0 +1,353 @@
+{
+  "common": [
+    [
+      "Поиск работы",
+      "Recherche d’emploi",
+      "Пошук роботи"
+    ],
+    [
+      "Материалы",
+      "Ressources",
+      "Матеріали"
+    ],
+    [
+      "Ниже указаны официальные карьерные страницы. Наличие компании в каталоге не означает, что она сейчас нанимает работников.",
+      "Voici des pages carrières officielles. Une entreprise répertoriée ne recrute pas nécessairement en ce moment.",
+      "Нижче наведено офіційні кар’єрні сторінки. Наявність компанії в каталозі не означає, що вона зараз наймає працівників."
+    ],
+    [
+      "Как проверить карьерный канал",
+      "Comment vérifier une page carrières",
+      "Як перевірити кар’єрну сторінку"
+    ],
+    [
+      "Уточните право работать в выбранной стране.",
+      "Vérifiez votre droit de travailler dans le pays choisi.",
+      "Перевірте право працювати в обраній країні."
+    ],
+    [
+      "Выберите конкретную профессию и проверьте язык и сертификаты.",
+      "Choisissez un métier précis et vérifiez les exigences linguistiques et les certificats.",
+      "Оберіть конкретну професію й перевірте вимоги до мови та сертифікатів."
+    ],
+    [
+      "Откройте официальную карьерную страницу и найдите действующую вакансию.",
+      "Consultez la page carrières officielle et recherchez une offre encore active.",
+      "Відкрийте офіційну кар’єрну сторінку й знайдіть актуальну вакансію."
+    ],
+    [
+      "Не передавайте личные документы случайным посредникам.",
+      "Ne transmettez pas vos documents personnels à des intermédiaires inconnus.",
+      "Не передавайте особисті документи невідомим посередникам."
+    ],
+    [
+      "Регион:",
+      "Région :",
+      "Регіон:"
+    ],
+    [
+      "Что искать:",
+      "Mots-clés à chercher :",
+      "Що шукати:"
+    ],
+    [
+      "Карьерная страница работодателя ↗",
+      "Site carrières de l’employeur ↗",
+      "Кар’єрна сторінка роботодавця ↗"
+    ],
+    [
+      "Открыть фильтр работодателей →",
+      "Ouvrir le filtre des employeurs →",
+      "Відкрити фільтр роботодавців →"
+    ],
+    [
+      "Государственная регистрация не равна открытой вакансии. Перед откликом проверяйте первоисточник и карьерный раздел компании.",
+      "Une inscription au registre public n’est pas une offre d’emploi. Vérifiez la source officielle et la page carrières avant de postuler.",
+      "Державна реєстрація не дорівнює відкритій вакансії. Перед поданням перевірте першоджерело та кар’єрний розділ компанії."
+    ],
+    [
+      "Три проверки перед откликом",
+      "Trois vérifications avant de postuler",
+      "Три перевірки перед поданням"
+    ],
+    [
+      "Сверьте данные компании с государственным источником.",
+      "Comparez les données de l’entreprise à celles de la source gouvernementale.",
+      "Звірте відомості про компанію з державним джерелом."
+    ],
+    [
+      "Найдите официальный сайт, контакты и актуальную карьерную страницу.",
+      "Trouvez le site officiel, les coordonnées et la page carrières à jour.",
+      "Знайдіть офіційний сайт, контакти й актуальну кар’єрну сторінку."
+    ],
+    [
+      "Уточните условия должности, разрешение на работу, расходы и срок объявления.",
+      "Vérifiez les conditions du poste, le permis de travail, les frais et la date limite de l’annonce.",
+      "Уточніть умови посади, дозвіл на роботу, витрати й термін дії оголошення."
+    ],
+    [
+      "Автоматические выгрузки могут быть частичными; дату сборки смотрите в приложении или на странице статуса.",
+      "Les extractions automatisées peuvent être partielles; vérifiez la date de collecte dans l’application ou sur la page d’état.",
+      "Автоматичне завантаження може бути неповним; дату збору даних дивіться в застосунку або на сторінці стану."
+    ],
+    [
+      "Открыть каталог →",
+      "Ouvrir le répertoire →",
+      "Відкрити каталог →"
+    ]
+  ],
+  "no": [
+    [
+      "РЫБНАЯ ОТРАСЛЬ · НОРВЕГИИ",
+      "SECTEUR DES PÊCHES · NORVÈGE",
+      "РИБНА ГАЛУЗЬ · НОРВЕГІЯ"
+    ],
+    [
+      "Работодатели в рыбной отрасли Норвегии",
+      "Employeurs du secteur des pêches en Norvège",
+      "Роботодавці в рибній галузі Норвегії"
+    ],
+    [
+      "Промысловые суда",
+      "Navires de pêche",
+      "Промислові судна"
+    ],
+    [
+      "Норвежский флот",
+      "Flotte norvégienne",
+      "Норвезький флот"
+    ],
+    [
+      "Официальная страница судового подразделения, есть open application и вакансии",
+      "Page officielle de la division maritime proposant des candidatures spontanées et des offres d’emploi.",
+      "Офіційна сторінка суднового підрозділу з відкритими заявками та вакансіями."
+    ],
+    [
+      "Фабрики, аквакультура, техника",
+      "Usines, aquaculture et technique",
+      "Заводи, аквакультура й техніка"
+    ],
+    [
+      "Норвегия, разные регионы",
+      "Norvège, plusieurs régions",
+      "Норвегія, різні регіони"
+    ],
+    [
+      "Карьерный портал группы, отдельные подразделения и возможность подписки на новые вакансии",
+      "Portail carrières du groupe : plusieurs filiales et possibilité de recevoir les nouvelles offres.",
+      "Кар’єрний портал групи з окремими підрозділами та можливістю підписатися на нові вакансії."
+    ],
+    [
+      "Аквакультура и фабрики",
+      "Aquaculture et usines",
+      "Аквакультура й заводи"
+    ],
+    [
+      "Frøya / Senja и др.",
+      "Frøya / Senja et autres régions",
+      "Frøya / Senja та інші регіони"
+    ],
+    [
+      "SalMar предупреждает, что мошенники выдают себя за кадровые агентства; применяй только их прямой канал",
+      "SalMar met en garde contre les fraudeurs se présentant comme recruteurs. Utilisez uniquement les canaux officiels.",
+      "SalMar попереджає про шахраїв, які видають себе за рекрутерів. Користуйтеся лише офіційними каналами."
+    ],
+    [
+      "Аквакультура и техника",
+      "Aquaculture et technique",
+      "Аквакультура й техніка"
+    ],
+    [
+      "По побережью Норвегии",
+      "Le long du littoral norvégien",
+      "Уздовж узбережжя Норвегії"
+    ],
+    [
+      "В фильтрах работодателя есть техника, механика, автоматизация и операторы",
+      "Les filtres de l’employeur comprennent les métiers techniques, la mécanique, l’automatisation et les postes d’opérateur.",
+      "Фільтри роботодавця охоплюють техніку, механіку, автоматизацію та операторські посади."
+    ],
+    [
+      "Север Норвегии",
+      "Nord de la Norvège",
+      "Північ Норвегії"
+    ],
+    [
+      "На официальной странице подробно описаны медицинская справка и безопасность рыбаков",
+      "Le site officiel présente les exigences de certificat médical et de formation en sécurité des pêcheurs.",
+      "На офіційному сайті докладно описано медичну довідку та безпеку рибалок."
+    ],
+    [
+      "Аквакультура, переработка, техника",
+      "Aquaculture, transformation et technique",
+      "Аквакультура, перероблення й техніка"
+    ],
+    [
+      "Официальная карьера и кадровая почта опубликованы компанией; актуальные даты вакансий на странице нужно перепроверять",
+      "La société publie ses pages carrières et son adresse de recrutement; vérifiez la date et la disponibilité de chaque offre.",
+      "Компанія публікує кар’єрні сторінки та кадрову пошту; перевіряйте дати й доступність кожної вакансії."
+    ],
+    [
+      "Рыбные реестры Норвегии: что они показывают",
+      "Registres des pêches de Norvège : ce qu’ils indiquent",
+      "Рибні реєстри Норвегії: що вони показують"
+    ],
+    [
+      "Mattilsynet: предприятия и переработка",
+      "Mattilsynet : entreprises et transformation",
+      "Mattilsynet: підприємства й перероблення"
+    ],
+    [
+      "Публичные записи помогают найти компании, производственные объекты, города и деятельность. Проверяйте название, актуальное состояние записи и официальный сайт.",
+      "Les données publiques indiquent des entreprises, des installations, des villes et des activités. Vérifiez le nom, l’état de l’inscription et le site officiel.",
+      "Відкриті записи допомагають знайти компанії, виробничі об’єкти, міста та види діяльності. Перевіряйте назву, стан реєстрації й офіційний сайт."
+    ],
+    [
+      "Mattilsynet — официальные сведения ↗",
+      "Mattilsynet — renseignements officiels ↗",
+      "Mattilsynet — офіційні відомості ↗"
+    ],
+    [
+      "Fiskeridirektoratet: рыболовный флот",
+      "Fiskeridirektoratet : flotte de pêche",
+      "Fiskeridirektoratet: риболовний флот"
+    ],
+    [
+      "Данные судового реестра описывают суда и деятельность. Они не подтверждают текущий набор матросов и не являются полным списком контактов судовладельцев.",
+      "Le registre des navires décrit les bateaux et leurs activités. Il ne prouve pas le recrutement de matelots et ne constitue pas une liste exhaustive de contacts d’armateurs.",
+      "Судновий реєстр описує судна та діяльність. Він не підтверджує набір матросів і не є повним переліком контактів судновласників."
+    ],
+    [
+      "Fiskeridirektoratet — официальные данные ↗",
+      "Fiskeridirektoratet — données officielles ↗",
+      "Fiskeridirektoratet — офіційні дані ↗"
+    ]
+  ],
+  "ca": [
+    [
+      "РЫБНАЯ ОТРАСЛЬ · КАНАДЫ",
+      "SECTEUR DES PÊCHES · CANADA",
+      "РИБНА ГАЛУЗЬ · КАНАДА"
+    ],
+    [
+      "Работодатели в рыбной отрасли Канады",
+      "Employeurs du secteur des pêches au Canada",
+      "Роботодавці в рибній галузі Канади"
+    ],
+    [
+      "Флот и переработка",
+      "Flotte et transformation",
+      "Флот і перероблення"
+    ],
+    [
+      "Суда: deckhand, factory worker, engineer; заводы: производственные и технические вакансии",
+      "Navires : deckhand, ouvrier d’usine, mécanicien; usines : production et métiers techniques.",
+      "Судна: deckhand, працівник суднової фабрики, механік; заводи: виробничі й технічні вакансії."
+    ],
+    [
+      "Официальная страница публикует специальный email судового найма; там указаны медсправки и иные требования",
+      "Le site officiel fournit un courriel dédié au recrutement maritime et précise les exigences médicales et autres.",
+      "Офіційна сторінка містить окрему адресу для набору на судна й вимоги до медичних та інших документів."
+    ],
+    [
+      "Аквакультура, техника, hatchery",
+      "Aquaculture, technique et écloseries",
+      "Аквакультура, техніка та інкубаторії"
+    ],
+    [
+      "Официальная кадровая почта опубликована компанией. Сайт пишет, что кандидату нужно законное право на работу в Канаде",
+      "L’entreprise publie un contact RH officiel et exige que les candidats aient le droit légal de travailler au Canada.",
+      "Компанія публікує офіційну кадрову пошту й вимагає законного права працювати в Канаді."
+    ],
+    [
+      "Аквакультура, переработка, логистика",
+      "Aquaculture, transformation et logistique",
+      "Аквакультура, перероблення та логістика"
+    ],
+    [
+      "Официальный сайт предлагает категории вакансий и предупреждает о фальшивых предложениях",
+      "Le site officiel classe les postes par métier et met en garde contre les fausses offres.",
+      "Офіційний сайт має категорії вакансій і попереджає про шахрайські пропозиції."
+    ],
+    [
+      "Суда и переработка",
+      "Navires et transformation",
+      "Судна й перероблення"
+    ],
+    [
+      "Официальная карьера; текущую вакансию нужно проверять отдельно",
+      "Page carrières officielle; vérifiez la disponibilité de chaque poste.",
+      "Офіційна кар’єрна сторінка; доступність кожної вакансії перевіряйте окремо."
+    ],
+    [
+      "Пищевая фабрика",
+      "Usine alimentaire",
+      "Харчовий завод"
+    ],
+    [
+      "В опубликованной политике компании сказано, что почта для accommodation не рассматривает обычные резюме — подавай через раздел Careers",
+      "La politique publiée précise que le courriel des demandes d’adaptation n’accepte pas les CV ordinaires. Postulez dans la section Carrières.",
+      "У політиці компанії сказано, що пошта для запитів адаптації не приймає звичайні CV. Подавайте заявку через розділ Careers."
+    ],
+    [
+      "Лососевые фермы",
+      "Fermes salmonicoles",
+      "Лососеві ферми"
+    ],
+    [
+      "Глобальная база вакансий компании; отфильтровать по стране и актуальной дате",
+      "Base mondiale d’offres d’emploi de l’entreprise; filtrez par pays et date.",
+      "Глобальна база вакансій компанії; фільтруйте за країною й датою."
+    ],
+    [
+      "Рыбопереработка",
+      "Transformation du poisson",
+      "Перероблення риби"
+    ],
+    [
+      "Manœuvre d&#39;usine, mécanicien industriel (пример объявлений осень 2026)",
+      "Manœuvre d&#39;usine, mécanicien industriel (exemples d’annonces de l’automne 2026)",
+      "Manœuvre d&#39;usine, mécanicien industriel (приклади оголошень восени 2026 року)"
+    ],
+    [
+      "Это не сайт компании: объявления опубликованы работодателем напрямую в государственном Job Bank. Проверить, ещё ли принимаются отклики",
+      "Ce lien mène au Guichet-Emplois public, et non au site de l’entreprise. Vérifiez si les candidatures sont encore acceptées.",
+      "Це посилання на державний Job Bank, а не сайт компанії. Перевірте, чи ще приймають заявки."
+    ],
+    [
+      "Рыбные реестры Канады: что они показывают",
+      "Registres des pêches du Canada : ce qu’ils indiquent",
+      "Рибні реєстри Канади: що вони показують"
+    ],
+    [
+      "CFIA: предприятия рыбопереработки",
+      "ACIA (CFIA) : transformation du poisson",
+      "CFIA: підприємства з перероблення риби"
+    ],
+    [
+      "Регистрационные записи описывают объекты или организации, а не действующие вакансии. Используйте название и провинцию для последующего поиска официального сайта работодателя.",
+      "Les inscriptions décrivent des établissements ou des organisations, non des postes disponibles. Recherchez le site officiel à l’aide du nom et de la province.",
+      "Реєстраційні записи описують об’єкти або організації, а не відкриті вакансії. За назвою і провінцією знайдіть офіційний сайт роботодавця."
+    ],
+    [
+      "CFIA — официальный список ↗",
+      "ACIA (CFIA) — liste officielle ↗",
+      "CFIA — офіційний перелік ↗"
+    ],
+    [
+      "DFO: рыбная отрасль и аквакультура",
+      "MPO (DFO) : pêche et aquaculture",
+      "DFO: рибна галузь та аквакультура"
+    ],
+    [
+      "Публичные данные об аквакультурных площадках помогают изучить географию отрасли. Лицензия или разрешение не означает, что объект набирает персонал.",
+      "Les données publiques sur les sites aquacoles aident à situer les activités. Une licence ne signifie pas qu’un site recrute.",
+      "Відкриті дані про аквакультурні майданчики допомагають вивчити географію галузі. Ліцензія не означає, що об’єкт наймає персонал."
+    ],
+    [
+      "DFO — официальная информация ↗",
+      "MPO (DFO) — renseignements officiels ↗",
+      "DFO — офіційні відомості ↗"
+    ]
+  ]
+}
