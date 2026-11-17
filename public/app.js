@@ -17,26 +17,16 @@ function email(mail){return /^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/.test(String(mail|
 function toast(t){let el=$('toast');el.textContent=t;el.style.display='block';clearTimeout(window.__qToast);window.__qToast=setTimeout(()=>el.style.display='none',3900)}
 const companies=()=>[...seed.companies,...publicCompanies,...imported];const jobs=()=>seed.jobs;
 const fleet=()=>[...seed.fleets,...publicVessels,...importedVessels];
-async function loadPublishedRegistry(force=false){
+async function loadPublishedRegistry(){
  try {
-  // User refresh reads the latest GitHub Pages snapshot, not a live government API.
-  const url='./generated/registry.json'+(force?'?refresh='+Date.now():'');
-  const response=await fetch(url,{cache:force?'no-store':'no-cache'});
+  const response=await fetch('./generated/registry.json',{cache:'no-cache'});
   if(!response.ok)throw Error('HTTP '+response.status);
   const data=await response.json();
-  if(!Array.isArray(data.companies)||!Array.isArray(data.vessels))throw Error('Неверный формат реестра');
+  if(!Array.isArray(data.companies)||!Array.isArray(data.vessels))throw Error('Invalid registry schema');
   if((data.companies.length+data.vessels.length)===0)throw Error('Опубликованная выгрузка пока пуста');
-  const lastDate=registryMeta.generated_at;
   publicCompanies=data.companies;publicVessels=data.vessels;registryMeta=data;
-  if(!document.querySelector('#main .qa-wrap'))render();
-  return {ok:true,changed:lastDate!==data.generated_at,generated_at:data.generated_at,status:data.status,
-    counts:{companies:data.companies.length,vessels:data.vessels.length}};
- }catch(e){
-  // A failed refresh must not erase a previously loaded successful snapshot.
-  if(!force)registryMeta={status:'unavailable',generated_at:null,counts:{},error:String(e.message||e)};
-  if(!document.querySelector('#main .qa-wrap')&&!force)render();
-  return {ok:false,error:String(e.message||e)};
- }
+ }catch(e){registryMeta={status:'unavailable',generated_at:null,counts:{},error:String(e.message||e)};}
+ if(!document.querySelector('#main .qa-wrap'))render();
 }
 
 const tick=(x)=>x?'✓':'○';const u=(v)=>String(v||'').toLowerCase();const contains=(s,q)=>u(s).includes(u(q));
@@ -136,9 +126,6 @@ document.addEventListener('click',e=>{let b=e.target.closest('[data-view],[data-
 document.addEventListener('change',async e=>{let t=e.target;if(t.dataset.statusKind){setStatus(t.dataset.statusKind,t.dataset.statusKey,t.value)}else if(t.dataset.done){lessons[t.dataset.done]=t.checked;save(KEYS.lessons,lessons);render()}else if(t.dataset.check){checks[t.dataset.check]=t.checked;save(KEYS.checks,checks);render()}else if(t.id==='cat'){state.cat=t.value;render()}else if(t.id==='termCat'){state.termCat=t.value;render()}else if(t.id==='csvFile'&&t.files?.[0]){await doCSV(t.files[0])}else if(t.id==='restoreFile'&&t.files?.[0]){try{if(t.files[0].size>4e6)throw Error('слишком большой файл');const x=JSON.parse(await t.files[0].text());if(x.app!=='qexus-fishing'||!Array.isArray(x.companies)||!Array.isArray(x.vessels))throw Error('Неверный формат');imported=x.companies;importedVessels=x.vessels;status=x.statuses||{};lessons=x.lessons||{};checks=x.checks||{};save(KEYS.companies,imported);save(KEYS.vessels,importedVessels);save(KEYS.statuses,status);save(KEYS.lessons,lessons);save(KEYS.checks,checks);restoreAcademyData(x.academy);render();toast('Резервная копия восстановлена, включая прогресс Академии')}catch(ex){toast('Не удалось прочитать эту резервную копию')}}});
 document.addEventListener('input',e=>{let t=e.target;if(['hourly','hours','weeks'].includes(t.id)){calc();return}if(['q','courseSearch','termSearch'].includes(t.id)){let ss=t.selectionStart||0;let v=t.value;if(t.id==='q')state.q=v;if(t.id==='courseSearch')state.courseSearch=v;if(t.id==='termSearch')state.termSearch=v;render();let a=$(t.id);if(a){a.focus();a.setSelectionRange(ss,ss)}}});
 window.qexusNavigate=function(view){state.view=view;state.q='';state.cat='Все';state.limit=100;render();document.getElementById('sidebar')?.classList.remove('open');document.getElementById('menuToggle')?.setAttribute('aria-expanded','false');window.scrollTo({top:0,behavior:'smooth'});};
-window.qexusReloadRegistry=()=>loadPublishedRegistry(true);
-window.qexusRegistryInfo=()=>({status:registryMeta.status,generated_at:registryMeta.generated_at,
- counts:{companies:publicCompanies.length,vessels:publicVessels.length}});
 render();
 loadPublishedRegistry();
 })();
