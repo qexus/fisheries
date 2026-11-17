@@ -180,3 +180,16 @@ assert(academyScript.includes('localStorage.getItem("qexus-academy-"'),"Local pr
 const certIds=(academyScript.match(/"(no-[a-z-]+)":\[/g)||[]).length;
 assert(certIds>=16,"Certificate translations must cover both FR and UK for every course card");
 console.log("Interactive Academy auxiliary views, prices, official URLs and persistent progress validated.");
+
+// Full localized Academy UI: all certification cards and interactive career/library pages.
+assert(html.includes('src="academy-ui.js"')&&html.indexOf('src="academy-ui.js"')<html.indexOf('src="academy.js"'),"Academy UI localization must load first");
+const ui=fs.readFileSync("public/academy-ui.js","utf8");
+for(const lang of ["fr","uk"]){
+ assert(ui.includes('"'+lang+'":'),"Missing Academy UI language "+lang);
+ for(const id of ["ca-sdv","ca-dvs","ca-stcw","ca-psc","no-fish","no-med","no-work"]){
+  assert(ui.includes('"'+id+'":'),"Missing translated certification "+id);
+ }
+}
+assert(fs.readFileSync("public/academy.js","utf8").includes("localizedJobsHTML"),"Translated job application checklist must be wired");
+assert(fs.readFileSync("public/academy.js","utf8").includes("localizedLibraryHTML"),"Translated official source library must be wired");
+console.log("20 professional certificates plus careers and libraries translated.");
