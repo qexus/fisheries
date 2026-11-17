@@ -36,6 +36,7 @@ jobs:
       - name: Validate Academy curriculum and JavaScript
         run: |
           node tests/check_content.mjs
+          node tests/check_locales.mjs
           for file in public/*.js; do node --check "$file"; done
       - name: Download public registries and build JSON
         shell: bash
