@@ -67,4 +67,9 @@ assert(!html.includes("noindex,nofollow"),"Public educational pages must not be 
 assert(html.includes('aria-controls="sidebar"') && html.includes('aria-expanded="false"'),"Mobile menu needs accessible state");
 assert(app.includes("if(!document.querySelector('#main .qa-wrap'))render()"),"Do not replace an open Academy view after registry fetch");
 
+
+assert(app.includes("function exportAcademyData()"),"Backup must include new Academy data");
+assert(app.includes("function restoreAcademyData("),"Old or new backup restoration must support Academy progress");
+assert(app.includes("academy:exportAcademyData()"),"Export must actually save Academy data");
+
 console.log("qexus academy: 12 modules, 24 quizzes, 14 role paths, 13 employer career links, script wiring OK.");
