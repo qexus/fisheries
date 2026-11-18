@@ -243,11 +243,11 @@ return '<div class="qa-intro"><div class="qa-label">ПОДТВЕРЖДЕННЫЕ
 '<div class="qa-cards">'+cards.map(c=>'<article class="qa-cert"><div class="qa-row"><span class="qa-kicker">'+E(c.kind)+'</span><span class="qa-price">'+E(c.price)+'</span></div><h3>'+E(c.name)+'</h3><p>'+E(c.role)+'</p><div class="qa-details"><span>📍 '+E(c.location)+'</span><span>🕒 '+E(c.duration)+'</span></div><div class="qa-tip">Перед оплатой: '+E(c.todo)+'</div><div class="qa-actions">'+external(c.source,"Правила и требования")+external(c.offer,"Курс / провайдер")+'</div></article>').join('')+'</div>';
 }
 
-function legacyExtras(id){
+function legacyExtras(id, language="ru"){
  const map=isCA
  ?{"01":["01"],"02":["02"],"04":["06"],"05":["05","07"],"06":["08"],"07":["04"],"08":["03"],"09":["10"],"10":["09"]}
  :{"01":[1],"03":[4],"04":[3],"05":[5],"06":[6],"07":[7],"08":[2],"09":[9],"10":[8],"11":[10]};
- const arr=isCA?(window.CANADA_FISHERIES_SEED?.lessons||[]):(window.QEXUS_DATA?.modules||[]);
+ const arr=isCA?(window.CANADA_FISHERIES_SEED?.lessons||[]):(window.QX_LEGACY_MODULES?.[language]||window.QEXUS_DATA?.modules||[]);
  const old=(map[id]||[]).map(n=>arr.find(x=>String(x.id)===String(n))).filter(Boolean);
  if(!old.length)return "";
  return '<details class="qa-legacy"><summary>Дополнительные материалы и практика <span>⌄</span></summary><div class="qa-legacy-content">'+old.map(x=>
@@ -274,6 +274,7 @@ function translatedCurriculumHTML(){
  for(const [h,p] of l.sections)out+='<h3>'+E(h)+'</h3><p>'+E(p)+'</p>';
  out+='<div class="qa-panel"><h3>'+(fr?"Exigences propres au pays":"Вимоги для країни")+'</h3><p>'+E(l.note)+'</p></div>';
  out+='<div class="qa-exercise"><b>'+(fr?"Exercice pratique":"Практичне завдання")+'</b><p>'+E(l.task)+'</p></div>';
+ out+=legacyExtras(l.id, language);
  out+=(window.qexusExpansionQuiz?.(l.id)||'');
  out+='<p><a href="'+E(url)+'">'+(fr?"Leçon complète et sources officielles":"Повний урок та офіційні джерела")+' ↗</a></p>';
  out+='<label class="qa-done"><input type="checkbox" data-qa-complete="'+E(l.id)+'"> '+(fr?"J’ai terminé cette activité":"Я виконав(ла) це завдання")+'</label></div></details>';
