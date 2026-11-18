@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import vm from 'node:vm';
 import assert from 'node:assert/strict';
-const window={};vm.runInNewContext(fs.readFileSync('public/backup-guard.js','utf8'),{window});
+const window={};vm.runInNewContext(fs.readFileSync('public/import-guard.js','utf8'),{window});
 const check=window.qxValidateBackup;
 const no={app:'qexus-fishing',companies:[{name:'Test',id:'a'}],vessels:[{ship:'Test',company:'Test'}],lessons:{'01':true},statuses:{'a':'Изучаю'}};
 const ca={app:'qexus-fisheries-canada',data:{imported:[{name:'Test',id:'a'}],notes:{'a':'<script>literal note</script>'},completed:['01'],favorites:['a']}};

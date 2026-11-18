@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 
 const load = name => fs.readFileSync(new URL('../public/' + name, import.meta.url), 'utf8');
-const files = ['data.js', 'backup-guard.js', 'app-locale.js', 'legacy-i18n.js', 'app.js'];
+const files = ['data.js', 'import-guard.js', 'app-locale.js', 'legacy-i18n.js', 'app.js'];
 const html = load('index.html');
 for (let i = 1; i < files.length; i++) {
   const before = html.indexOf('src="' + files[i - 1] + '"');
