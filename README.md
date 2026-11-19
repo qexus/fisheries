@@ -33,4 +33,4 @@ Qualification costs, job status and immigration requirements must be verified wi
     node tests/check_switch_labels.mjs
     python3 -m http.server 8000 --directory public
 
-See docs/JOBS_FEEDS.md for the optional inactive provider integration and explicit permission requirements. The public site remains https://qexus.github.io/fisheries/.
+Historical job snapshots are not a live vacancy feed; visitors should use the official NAV searches. The public site remains https://qexus.github.io/fisheries/.
