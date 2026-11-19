@@ -243,3 +243,7 @@ td small{color:#90afbb}
 .seo-static-guides a:hover{border-color:#4adac2;background:#164050}
 .seo-static-guides a:focus-visible{outline:2px solid #4adac2;outline-offset:3px}
 @media(max-width:680px){.seo-static-guides{padding:12px 16px 24px}}
+
+/* Keep the footer out of the first viewport while the official registry UI hydrates.
+   Prevents a mobile layout shift from the short crawlable fallback to the dashboard. */
+#main.content{min-height:100vh;min-height:100svh}
