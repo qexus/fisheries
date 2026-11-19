@@ -42,6 +42,7 @@ jobs:
           node tests/check_journey.mjs
           node tests/check_desk.mjs
           node tests/check_practicum.mjs
+          node tests/check_source_quality.mjs
           for file in public/*.js; do node --check "$file"; done
       - name: Download public registries and build JSON
         shell: bash
